@@ -4,15 +4,13 @@
 #     % of active users (i.e. users who sent a message) from each source
 
 SELECT source,
-       sum(total_users) as total_users,
-       sum(total_senders) as users_who_sent_message,
-       sum(total_senders)/sum(total_users) as percent_active_users
+       count(user_signup) as count_total_users,
+       count(user_sender) as count_total_senders,
+       count(user_sender)/count(user_signup) as percent_active_users
 FROM
   ( SELECT distinct u.source as source,
           u.user_id as user_signup,
-          m.user_from as user_sender,
-          1 as total_users,
-          IF(m.user_from IS NULL, 0, 1) as total_senders
+          m.user_from as user_sender
     FROM users u
         LEFT OUTER JOIN messages m
           ON u.user_id = m.user_from ) users_and_users_who_sent

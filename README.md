@@ -13,3 +13,12 @@ We find the total number of users from each source who sent a message then divid
 * user_to - user_id of user who received message
 * medium - type of message sent (text, video, photo)
 * created_at - date user sent message
+
+##### RESULTS
+| source | total users | total senders | percent active |
+|--------|-------------|---------------|----------------|
+| bing   |      9      |       8       |    0.8889      |
+|--------|-------------|---------------|----------------|
+| google |      8      |       6       |    0.7500      |
+|--------|-------------|---------------|----------------|
+| yahoo  |      8      |       7       |    0.8750      |

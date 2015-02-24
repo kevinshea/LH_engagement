@@ -1,7 +1,7 @@
 # Query to return:
 #     number of users who signed up from each source
 #     number of users from each source who sent a message
-#     % of active users (i.e. users who sent a message) from each source 
+#     % of active users (i.e. users who sent a message) from each source
 
 SELECT source,
        sum(total_users) as total_users,
@@ -15,5 +15,5 @@ FROM
           IF(m.user_from IS NULL, 0, 1) as total_senders
     FROM users u
         LEFT OUTER JOIN messages m
-        on u.user_id = m.user_from ) users_and_users_who_sent
+          ON u.user_id = m.user_from ) users_and_users_who_sent
 GROUP BY source

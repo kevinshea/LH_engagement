@@ -18,7 +18,5 @@ We find the total number of users from each source who sent a message then divid
 | source | total users | total senders | percent active |
 |--------|-------------|---------------|----------------|
 | bing   |      9      |       8       |    0.8889      |
-|--------|-------------|---------------|----------------|
 | google |      8      |       6       |    0.7500      |
-|--------|-------------|---------------|----------------|
 | yahoo  |      8      |       7       |    0.8750      |
